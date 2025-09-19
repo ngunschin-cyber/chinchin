@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Dating App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="screen active" id="splash">
+    <h1>💖 Global Dating App 💖</h1>
+    <p><b>Name:</b> Ngun Sui Chin</p>
+    <p><b>ID:</b> 240702401851</p>
+    <button class="primary" onclick="goToPage('login')">Enter App</button>
+  </div>
+
+  <div class="screen" id="login">
+    <h2>Welcome Back</h2>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button class="primary" onclick="goToPage('home')">Login</button>
+    <p class="link">Don't have an account? <span onclick="goToPage('signup')">Sign Up</span></p>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <div class="screen" id="signup">
+    <h2>Create Account</h2>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button class="primary" onclick="goToPage('home')">Sign Up</button>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <div class="screen" id="home">
+    <header>
+      <h2>Find Partners Near You 🌍</h2>
+    </header>
+    <div id="nearby" class="card-list"></div>
+    <p>Choose your language:</p>
+    <select id="language"></select>
+    <nav class="bottom-nav">
+      <button onclick="goToPage('profile')">👤 Profile</button>
+      <button onclick="goToPage('matches')">❤️ Matches</button>
+      <button onclick="goToPage('chat')">💬 Chat</button>
+      <button onclick="goToPage('settings')">⚙️ Settings</button>
+    </nav>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <div class="screen" id="profile">
+    <h2>My Profile</h2>
+    <div class="card">
+      <p><b>Name:</b> Chin Chin</p>
+      <p><b>Age:</b> 22</p>
+      <p><b>Location:</b> Bangkok, Thailand</p>
+    </div>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <div class="screen" id="matches">
+    <h2>My Matches ❤️</h2>
+    <ul class="card-list">
+      <li class="card">Alice (2km away)</li>
+      <li class="card">Bob (5km away)</li>
+    </ul>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <div class="screen" id="chat">
+    <h2>Chat 💬</h2>
+    <div id="chatBox" class="chat-box">
+      <p><b>Alice:</b> Hi there!</p>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Type a message...">
+      <button class="primary" onclick="sendMessage()">Send</button>
+    </div>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <div class="screen" id="settings">
+    <h2>Settings ⚙️</h2>
+    <p>Language:</p>
+    <select>
+      <option>English</option>
+      <option>Myanmar</option>
+      <option>Thai</option>
+      <option>Chinese</option>
+    </select>
+    <br><br>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+</body>
+</html>
